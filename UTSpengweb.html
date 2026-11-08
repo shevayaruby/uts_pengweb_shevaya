@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NCT WISH Fanbase</title>
+  <!-- Favicon sederhana (emoji bintang), tidak perlu file gambar -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+
+  <style>
+    /* ===== Dasar ===== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Trebuchet MS", Verdana, sans-serif;
+      background: #f4fafd;
+      color: #1f2a44;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .wadah { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+    /* ===== Header ===== */
+    header {
+      /* Ganti dengan gambar banner: background-image: url("banner.jpg"); */
+      background-color: #bfe3f5;
+      background-size: cover;
+      background-position: center;
+      padding: 32px 0;
+    }
+    header .wadah { display: flex; align-items: center; gap: 16px; }
+    .logo {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: #1f2a44; color: #ffe9a8;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: bold; font-size: 20px;
+    }
+    header h1 { font-size: 1.8rem; }
+
+    /* ===== Teks pengumuman (diam, di tengah) ===== */
+    .pengumuman {
+      background: #1f2a44;
+      color: #ffe9a8;
+      text-align: center;
+      padding: 6px 16px;
+    }
+
+    /* ===== Navigasi + dropdown ===== */
+    nav { background: #fff; border-bottom: 3px solid #bfe3f5; position: sticky; top: 0; z-index: 10; }
+    nav ul { list-style: none; display: flex; flex-wrap: wrap; }
+    nav li { position: relative; }
+    nav a { display: block; padding: 12px 18px; text-decoration: none; font-weight: bold; }
+    nav a:hover { background: #ffe9a8; }
+    .dropdown {
+      display: none;
+      position: absolute; top: 100%; left: 0;
+      background: #fff; min-width: 180px;
+      border: 1px solid #bfe3f5;
+    }
+    .dropdown a { font-weight: normal; }
+    nav li:hover .dropdown { display: block; }
+
+    /* ===== Tata letak: konten + sidebar ===== */
+    .tata-letak { display: grid; grid-template-columns: 1fr 280px; gap: 24px; padding: 24px 16px; }
+    section { background: #fff; padding: 18px; margin-bottom: 20px; border-left: 6px solid #bfe3f5; scroll-margin-top: 60px; }
+    section h2 { margin-bottom: 10px; }
+    section p { margin-bottom: 8px; }
+    .atas { display: inline-block; margin-top: 6px; font-size: 0.9rem; }
+
+    /* ===== Artikel ===== */
+    .artikel { border-bottom: 1px dashed #bfe3f5; padding-bottom: 12px; margin-bottom: 12px; }
+    .artikel h3 a { text-decoration: none; }
+    .artikel h3 a:hover { text-decoration: underline; }
+    .tanggal { font-size: 0.85rem; color: #5b6477; }
+    .baca {
+      display: inline-block; padding: 4px 12px;
+      background: #1f2a44; color: #fff;
+      text-decoration: none; border-radius: 16px;
+    }
+
+    /* ===== Kartu member ===== */
+    .member { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+    .kartu { border: 1px solid #bfe3f5; padding: 12px; text-align: center; }
+    .foto {
+      width: 70px; height: 70px; border-radius: 50%;
+      background: #ffc9d6; margin: 0 auto 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; font-weight: bold;
+    }
+    .kartu small { color: #5b6477; }
+
+    /* ===== Tabel Group Info ===== */
+    table { border-collapse: collapse; width: 100%; }
+    td { border: 1px solid #bfe3f5; padding: 8px; }
+    td:first-child { background: #eaf6fc; font-weight: bold; width: 35%; }
+
+    /* ===== Sidebar ===== */
+    aside .widget { background: #fff; padding: 14px; margin-bottom: 18px; border-top: 4px solid #ffe9a8; }
+    aside h3 { font-size: 1rem; margin-bottom: 8px; }
+    #jam { font-size: 2rem; font-weight: bold; }
+    aside iframe { width: 100%; height: 160px; border: 0; }
+
+    /* ===== Footer ===== */
+    footer { background: #1f2a44; color: #fff; text-align: center; padding: 18px 16px; font-size: 0.9rem; }
+    footer a { color: #ffe9a8; }
+
+    /* ===== Tampilan HP ===== */
+    @media (max-width: 760px) {
+      .tata-letak { grid-template-columns: 1fr; }
+      nav ul { flex-direction: column; }
+      .dropdown { position: static; }
+    }
+  </style>
+</head>
+<body id="home">
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="wadah">
+      <div class="logo">NW</div>
+      <div>
+        <h1>NCT WISH Fanbase</h1>
+        <p>Profil dan kabar terbaru NCT WISH</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== TEKS PENGUMUMAN ===== -->
+  <div class="pengumuman">
+    Selamat datang di NCT WISH Fanbase! Pantau terus kabar terbaru NCT WISH di sini.
+  </div>
+
+  <!-- ===== NAVIGASI ===== -->
+  <nav>
+    <div class="wadah">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li>
+          <a href="#biografi">About</a>
+          <ul class="dropdown">
+            <li><a href="#biografi">Biografi</a></li>
+            <li><a href="#member">Member</a></li>
+            <li><a href="#groupinfo">Group Info</a></li>
+            <li><a href="#visimisi">Visi &amp; Misi</a></li>
+          </ul>
+        </li>
+        <li><a href="#artikel">Artikel</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== ISI HALAMAN ===== -->
+  <div class="wadah tata-letak">
+
+    <main>
+
+      <!-- Home -->
+      <section id="artikel">
+        <h2>Artikel Terbaru</h2>
+
+        <div class="artikel">
+          <h3><a href="#artikel1">Awal Debut NCT WISH</a></h3>
+          <p class="tanggal">8 November 2026</p>
+          <p>Cerita singkat tentang bagaimana NCT WISH memulai debutnya.</p>
+          <a class="baca" href="#artikel1">Read More</a>
+        </div>
+
+        <div class="artikel">
+          <h3><a href="#artikel2">Single Pertama "Wish"</a></h3>
+          <p class="tanggal">8 November 2026</p>
+          <p>Mengenal single pertama yang dirilis NCT WISH.</p>
+          <a class="baca" href="#artikel2">Read More</a>
+        </div>
+
+        <div class="artikel">
+          <h3><a href="#artikel3">Mengenal Fandom NCTzen</a></h3>
+          <p class="tanggal">8 November 2026</p>
+          <p>Sedikit informasi tentang fandom yang mendukung NCT WISH.</p>
+          <a class="baca" href="#artikel3">Read More</a>
+        </div>
+      </section>
+
+      <!-- Biografi -->
+      <section id="biografi">
+        <h2>Biografi</h2>
+        <p>NCT WISH adalah boygroup beranggotakan enam orang di bawah naungan SM Entertainment. Grup ini merupakan sub-unit keenam dan terakhir dari NCT.</p>
+        <p>NCT WISH tampil pertama kali pada Februari 2024 dalam sebuah konser SMTOWN di Tokyo, lalu merilis single "Wish" pada akhir bulan yang sama.</p>
+        <p>Grup ini unik karena sebagian member berasal dari Korea dan sebagian lagi dari Jepang.</p>
+        <a class="atas" href="#home">Kembali ke atas</a>
+      </section>
+
+      <!-- Member -->
+      <section id="member">
+        <h2>Member</h2>
+        <div class="member">
+          <div class="kartu"><div class="foto">S</div><strong>Sion</strong><br><small>Leader, Lead Vocalist<br>Asal: Mokpo, Korea</small></div>
+          <div class="kartu"><div class="foto">R</div><strong>Riku</strong><br><small>Main Rapper<br>Asal: Fukui, Jepang</small></div>
+          <div class="kartu"><div class="foto">Y</div><strong>Yushi</strong><br><small>Main Dancer<br>Asal: Tokyo, Jepang</small></div>
+          <div class="kartu"><div class="foto">J</div><strong>Jaehee</strong><br><small>Main Vocalist<br>Asal: Daegu, Korea</small></div>
+          <div class="kartu"><div class="foto">R</div><strong>Ryo</strong><br><small>Sub Vocalist<br>Asal: Kyoto, Jepang</small></div>
+          <div class="kartu"><div class="foto">S</div><strong>Sakuya</strong><br><small>Lead Rapper, Sub Vocalist, Maknae<br>Asal: Saitama, Jepang</small></div>
+        </div>
+        <a class="atas" href="#home">Kembali ke atas</a>
+      </section>
+
+      <!-- Group Info -->
+      <section id="groupinfo">
+        <h2>Group Info</h2>
+        <table>
+          <tr><td>Nama Grup</td><td>NCT WISH</td></tr>
+          <tr><td>Agensi</td><td>SM Entertainment</td></tr>
+          <tr><td>Grup Induk</td><td>NCT</td></tr>
+          <tr><td>Jumlah Member</td><td>6 orang</td></tr>
+          <tr><td>Debut</td><td>Februari 2024</td></tr>
+          <tr><td>Fandom</td><td>NCTzen</td></tr>
+        </table>
+        <a class="atas" href="#home">Kembali ke atas</a>
+      </section>
+
+      <!-- Visi Misi -->
+      <section id="visimisi">
+        <h2>Visi &amp; Misi Fanbase</h2>
+        <p><strong>Visi:</strong> Menjadi tempat informasi NCT WISH yang rapi dan mudah dibaca.</p>
+        <p><strong>Misi:</strong></p>
+        <ul>
+          <li>Menyajikan profil member dan grup secara jelas.</li>
+          <li>Membagikan artikel dan kabar terbaru.</li>
+          <li>Menjadi tempat berkumpul sesama penggemar.</li>
+        </ul>
+        <a class="atas" href="#home">Kembali ke atas</a>
+      </section>
+
+      <!-- Artikel lengkap (tujuan tombol Read More) -->
+      <section id="artikel1">
+        <h2>Awal Debut NCT WISH</h2>
+        <p class="tanggal">8 November 2026</p>
+        <p>Isi lengkap artikel pertama. Tulis dengan kata-katamu sendiri tentang awal debut NCT WISH, misalnya penampilan pertama mereka di Tokyo pada Februari 2024.</p>
+        <a class="atas" href="#artikel">Kembali ke daftar artikel</a>
+      </section>
+
+      <section id="artikel2">
+        <h2>Single Pertama "Wish"</h2>
+        <p class="tanggal">8 November 2026</p>
+        <p>Isi lengkap artikel kedua. Ceritakan tentang single "Wish" yang dirilis pada 28 Februari 2024, misalnya konsep dan sambutan penggemar.</p>
+        <a class="atas" href="#artikel">Kembali ke daftar artikel</a>
+      </section>
+
+      <section id="artikel3">
+        <h2>Mengenal Fandom NCTzen</h2>
+        <p class="tanggal">8 November 2026</p>
+        <p>Isi lengkap artikel ketiga. Jelaskan apa itu NCTzen, fandom dari NCT secara keseluruhan, dan bagaimana mereka mendukung NCT WISH.</p>
+        <a class="atas" href="#artikel">Kembali ke daftar artikel</a>
+      </section>
+
+    </main>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside>
+      <div class="widget">
+        <h3>Waktu Sekarang</h3>
+        <div id="jam">--:--:--</div>
+      </div>
+
+      <div class="widget">
+        <h3>Video</h3>
+        <!-- Ganti VIDEO_ID dengan ID video YouTube (bagian setelah v= di link) -->
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video NCT WISH" allowfullscreen></iframe>
+      </div>
+
+      <div class="widget">
+        <h3>Tentang Website</h3>
+        <p>Website penggemar NCT WISH, dibuat untuk tugas UTS Desain Website.</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 NCT WISH Fanbase. Didesain oleh [isi namamu].</p>
+    <p><a href="https://usernamemu.github.io/nct-wish/">https://usernamemu.github.io/nct-wish/</a></p>
+  </footer>
+
+  <script>
+    // Menampilkan jam digital di sidebar
+    function tampilkanJam() {
+      var sekarang = new Date();                          // ambil waktu saat ini
+      var jam = document.getElementById("jam");           // cari elemen dengan id "jam"
+      jam.textContent = sekarang.toLocaleTimeString("id-ID"); // tulis waktu ke elemen
+    }
+
+    tampilkanJam();                  // jalankan sekali saat halaman dibuka
+    setInterval(tampilkanJam, 1000); // ulangi tiap 1000 ms (1 detik)
+  </script>
+
+</body>
+</html>
