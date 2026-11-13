@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NCT WISH Fanbase</title>
-  <!-- Favicon sederhana (emoji bintang), tidak perlu file gambar -->
+  
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
 
   <style>
-    /* ===== Dasar ===== */
+    
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -20,9 +20,9 @@
     a { color: inherit; }
     .wadah { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
 
-    /* ===== Header ===== */
+    
     header {
-      /* Ganti dengan gambar banner: background-image: url("banner.jpg"); */
+      
       background-color: #bfe3f5;
       background-size: cover;
       background-position: center;
@@ -31,13 +31,12 @@
     header .wadah { display: flex; align-items: center; gap: 16px; }
     .logo {
       width: 64px; height: 64px; border-radius: 50%;
-      background: #1f2a44; color: #ffe9a8;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: bold; font-size: 20px;
+      object-fit: cover;
     }
+    
     header h1 { font-size: 1.8rem; }
 
-    /* ===== Teks pengumuman (diam, di tengah) ===== */
+    
     .pengumuman {
       background: #1f2a44;
       color: #ffe9a8;
@@ -45,7 +44,7 @@
       padding: 6px 16px;
     }
 
-    /* ===== Navigasi + dropdown ===== */
+    
     nav { background: #fff; border-bottom: 3px solid #bfe3f5; position: sticky; top: 0; z-index: 10; }
     nav ul { list-style: none; display: flex; flex-wrap: wrap; }
     nav li { position: relative; }
@@ -60,14 +59,14 @@
     .dropdown a { font-weight: normal; }
     nav li:hover .dropdown { display: block; }
 
-    /* ===== Tata letak: konten + sidebar ===== */
+    
     .tata-letak { display: grid; grid-template-columns: 1fr 280px; gap: 24px; padding: 24px 16px; }
     section { background: #fff; padding: 18px; margin-bottom: 20px; border-left: 6px solid #bfe3f5; scroll-margin-top: 60px; }
     section h2 { margin-bottom: 10px; }
     section p { margin-bottom: 8px; }
     .atas { display: inline-block; margin-top: 6px; font-size: 0.9rem; }
 
-    /* ===== Artikel ===== */
+    
     .artikel { border-bottom: 1px dashed #bfe3f5; padding-bottom: 12px; margin-bottom: 12px; }
     .artikel h3 a { text-decoration: none; }
     .artikel h3 a:hover { text-decoration: underline; }
@@ -78,33 +77,34 @@
       text-decoration: none; border-radius: 16px;
     }
 
-    /* ===== Kartu member ===== */
+    
     .member { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
     .kartu { border: 1px solid #bfe3f5; padding: 12px; text-align: center; }
     .foto {
       width: 70px; height: 70px; border-radius: 50%;
-      background: #ffc9d6; margin: 0 auto 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; font-weight: bold;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 8px;
     }
     .kartu small { color: #5b6477; }
 
-    /* ===== Tabel Group Info ===== */
+    
     table { border-collapse: collapse; width: 100%; }
     td { border: 1px solid #bfe3f5; padding: 8px; }
     td:first-child { background: #eaf6fc; font-weight: bold; width: 35%; }
 
-    /* ===== Sidebar ===== */
+    
+    aside { min-width: 0; }
     aside .widget { background: #fff; padding: 14px; margin-bottom: 18px; border-top: 4px solid #ffe9a8; }
     aside h3 { font-size: 1rem; margin-bottom: 8px; }
     #jam { font-size: 2rem; font-weight: bold; }
-    aside iframe { width: 100%; height: 160px; border: 0; }
+    aside .thumb { width: 100%; max-width: 100%; height: auto; display: block; margin-bottom: 6px; }
 
-    /* ===== Footer ===== */
+    
     footer { background: #1f2a44; color: #fff; text-align: center; padding: 18px 16px; font-size: 0.9rem; }
     footer a { color: #ffe9a8; }
 
-    /* ===== Tampilan HP ===== */
+    
     @media (max-width: 760px) {
       .tata-letak { grid-template-columns: 1fr; }
       nav ul { flex-direction: column; }
@@ -114,10 +114,10 @@
 </head>
 <body id="home">
 
-  <!-- ===== HEADER ===== -->
+  
   <header>
     <div class="wadah">
-      <div class="logo">NW</div>
+      <img class="logo" src="images/NCT WISH Logo.jpg" alt="Logo NCT WISH">
       <div>
         <h1>NCT WISH Fanbase</h1>
         <p>Profil dan kabar terbaru NCT WISH</p>
@@ -125,12 +125,12 @@
     </div>
   </header>
 
-  <!-- ===== TEKS PENGUMUMAN ===== -->
+  
   <div class="pengumuman">
     Selamat datang di NCT WISH Fanbase! Pantau terus kabar terbaru NCT WISH di sini.
   </div>
 
-  <!-- ===== NAVIGASI ===== -->
+  
   <nav>
     <div class="wadah">
       <ul>
@@ -149,12 +149,12 @@
     </div>
   </nav>
 
-  <!-- ===== ISI HALAMAN ===== -->
+  
   <div class="wadah tata-letak">
 
     <main>
 
-      <!-- Home -->
+      
       <section id="artikel">
         <h2>Artikel Terbaru</h2>
 
@@ -180,30 +180,30 @@
         </div>
       </section>
 
-      <!-- Biografi -->
+      
       <section id="biografi">
         <h2>Biografi</h2>
-        <p>NCT WISH adalah boygroup beranggotakan enam orang di bawah naungan SM Entertainment. Grup ini merupakan sub-unit keenam dan terakhir dari NCT.</p>
-        <p>NCT WISH tampil pertama kali pada Februari 2024 dalam sebuah konser SMTOWN di Tokyo, lalu merilis single "Wish" pada akhir bulan yang sama.</p>
-        <p>Grup ini unik karena sebagian member berasal dari Korea dan sebagian lagi dari Jepang.</p>
+        <p> <strong>NCT WISH</strong> adalah grup boy group beranggotakan enam orang di bawah naungan <strong>SM Entertainment</strong>, sekaligus menjadi sub-unit terakhir dari brand NCT. Grup ini dibentuk melalui program survival tahun 2023, <strong>NCT Universe: LASTART</strong>, dan tampil di Tokyo Dome pada 21 Februari 2024. Album single bertajuk <em>WISH</em> kemudian dirilis pada 28 Februari 2024.
+        <p> Meskipun susunan anggota final awalnya diumumkan terdiri dari tujuh orang, salah satu trainee, Jungmin, memutuskan untuk mengundurkan diri dari grup pada 2 Oktober 2023 karena masalah kesehatan, sebelum debut resmi mereka. Hal tersebut telah dikonfirmasi melalui pengumuman resmi SM Entertainment.
+        <p> Dengan demikian, NCT WISH melanjutkan aktivitasnya dengan enam anggota, yaitu Sion (Leader), Riku, Yushi, Jaehee, Ryo, dan Sakuya. </p>
         <a class="atas" href="#home">Kembali ke atas</a>
       </section>
 
-      <!-- Member -->
+      
       <section id="member">
         <h2>Member</h2>
         <div class="member">
-          <div class="kartu"><div class="foto">S</div><strong>Sion</strong><br><small>Leader, Lead Vocalist<br>Asal: Mokpo, Korea</small></div>
-          <div class="kartu"><div class="foto">R</div><strong>Riku</strong><br><small>Main Rapper<br>Asal: Fukui, Jepang</small></div>
-          <div class="kartu"><div class="foto">Y</div><strong>Yushi</strong><br><small>Main Dancer<br>Asal: Tokyo, Jepang</small></div>
-          <div class="kartu"><div class="foto">J</div><strong>Jaehee</strong><br><small>Main Vocalist<br>Asal: Daegu, Korea</small></div>
-          <div class="kartu"><div class="foto">R</div><strong>Ryo</strong><br><small>Sub Vocalist<br>Asal: Kyoto, Jepang</small></div>
-          <div class="kartu"><div class="foto">S</div><strong>Sakuya</strong><br><small>Lead Rapper, Sub Vocalist, Maknae<br>Asal: Saitama, Jepang</small></div>
+          <div class="kartu"><img class="foto" src="images/sionispy.jpg" alt="Sion"><strong>Sion</strong><br><small>Leader, Lead Vocalist<br>Asal: Mokpo, Korea</small></div>
+          <div class="kartu"><img class="foto" src="images/rikuispy.jpg" alt="Riku"><strong>Riku</strong><br><small>Main Rapper<br>Asal: Fukui, Jepang</small></div>
+          <div class="kartu"><img class="foto" src="images/yushiispy.jpg" alt="Yushi"><strong>Yushi</strong><br><small>Main Dancer<br>Asal: Tokyo, Jepang</small></div>
+          <div class="kartu"><img class="foto" src="images/jaeheeispy.jpg" alt="Jaehee"><strong>Jaehee</strong><br><small>Main Vocalist<br>Asal: Daegu, Korea</small></div>
+          <div class="kartu"><img class="foto" src="images/ryoispy.jpg" alt="Ryo"><strong>Ryo</strong><br><small>Sub Vocalist<br>Asal: Kyoto, Jepang</small></div>
+          <div class="kartu"><img class="foto" src="images/sakuyaispy.jpg" alt="Sakuya"><strong>Sakuya</strong><br><small>Lead Rapper, Sub Vocalist, Maknae<br>Asal: Saitama, Jepang</small></div>
         </div>
         <a class="atas" href="#home">Kembali ke atas</a>
       </section>
 
-      <!-- Group Info -->
+      
       <section id="groupinfo">
         <h2>Group Info</h2>
         <table>
@@ -217,7 +217,7 @@
         <a class="atas" href="#home">Kembali ke atas</a>
       </section>
 
-      <!-- Visi Misi -->
+      
       <section id="visimisi">
         <h2>Visi &amp; Misi Fanbase</h2>
         <p><strong>Visi:</strong> Menjadi tempat informasi NCT WISH yang rapi dan mudah dibaca.</p>
@@ -230,31 +230,42 @@
         <a class="atas" href="#home">Kembali ke atas</a>
       </section>
 
-      <!-- Artikel lengkap (tujuan tombol Read More) -->
+      
       <section id="artikel1">
         <h2>Awal Debut NCT WISH</h2>
         <p class="tanggal">8 November 2026</p>
-        <p>Isi lengkap artikel pertama. Tulis dengan kata-katamu sendiri tentang awal debut NCT WISH, misalnya penampilan pertama mereka di Tokyo pada Februari 2024.</p>
+        <p>Awal Debut NCT WISH
+        <p>NCT WISH resmi memulai perjalanan debutnya pada Februari 2024. Sebelum diperkenalkan sebagai unit terakhir dari NCT, grup yang beranggotakan Sion, Riku, Yushi, Jaehee, Ryo, dan Sakuya ini lebih dahulu dikenal dengan nama NCT NEW TEAM. Mereka menjalani sejumlah kegiatan pradebut di Jepang untuk memperkenalkan para anggota sekaligus membangun kedekatan dengan penggemar.
+        <p>Momen debut NCT WISH diawali dengan penampilan mereka di Tokyo Dome, Jepang, pada 21 Februari 2024, dalam acara <strong>SMTOWN LIVE 2024 SMCU PALACE @TOKYO</strong>. Penampilan tersebut menjadi kesempatan bagi NCT WISH untuk tampil di hadapan publik sebagai bagian dari keluarga besar NCT. Kehadiran mereka di salah satu panggung musik terbesar di Jepang sekaligus menandai babak baru perjalanan grup setelah melewati masa pradebut.
+        <p>Tak berselang lama, tepatnya pada 28 Februari 2024, NCT WISH resmi merilis single album debut bertajuk <strong>WISH</strong>. Album tersebut berisi dua lagu, yakni "WISH" sebagai lagu utama dan "Sail Away" sebagai lagu pendamping. Melalui album ini, NCT WISH memperkenalkan warna musik dengan nuansa ceria, segar, dan energik yang mencerminkan karakter mereka sebagai grup dengan semangat anak muda.
+        <p>Lagu "WISH" membawa pesan tentang harapan dan keinginan untuk meraih impian. Tema tersebut juga tercermin dalam slogan grup, <strong>"WISH for Our WISH"</strong>, yang menghubungkan harapan para anggota dengan impian para penggemar. Sejalan dengan arah aktivitas grup, NCT WISH juga merilis karya dalam bahasa Korea dan Jepang untuk menjangkau pendengar di kedua negara tersebut.
+        <p>Kehadiran NCT WISH mendapat sambutan antusias dari para penggemar, terutama NCTzen yang telah mengikuti perjalanan mereka sejak program survival NCT Universe: LASTART. Perilisan album debut ini menjadi langkah awal bagi NCT WISH dalam membangun identitas musik sekaligus memperluas jangkauan mereka di industri K-pop dan J-pop. Dengan debut tersebut, NCT WISH memulai perjalanan baru sebagai unit keenam sekaligus unit terakhir dalam proyek NCT.</p>
         <a class="atas" href="#artikel">Kembali ke daftar artikel</a>
       </section>
 
       <section id="artikel2">
         <h2>Single Pertama "Wish"</h2>
         <p class="tanggal">8 November 2026</p>
-        <p>Isi lengkap artikel kedua. Ceritakan tentang single "Wish" yang dirilis pada 28 Februari 2024, misalnya konsep dan sambutan penggemar.</p>
+        <p>NCT WISH resmi memperkenalkan karya debut mereka melalui single album bertajuk <strong>WISH</strong> yang dirilis pada 28 Februari 2024. Album ini menjadi langkah awal bagi grup tersebut dalam memperkenalkan identitas musik dan konsep mereka kepada publik. Mengusung nuansa ceria, segar, dan penuh energi, NCT WISH menghadirkan warna musik yang mencerminkan karakter serta semangat keenam anggotanya.
+        <P>Lagu utama "WISH" menggabungkan genre <em>old-school hip-hop</em> dengan irama <em>medium-tempo dance</em>. Perpaduan tersebut menghasilkan musik dengan nuansa ritmis dan melodi yang mudah diingat. Tidak hanya menonjolkan sisi musikalitas, lagu ini juga membawa pesan tentang harapan, impian, serta semangat untuk memulai perjalanan baru. Pesan tersebut sejalan dengan slogan NCT WISH, yaitu <strong>"WISH for Our WISH"</strong>, yang menggambarkan harapan para anggota untuk mewujudkan impian bersama para penggemar.
+        <p>Selain lagu utama "WISH", single album ini turut memuat lagu B-side berjudul "Sail Away". Lagu tersebut menggambarkan perjalanan menuju masa depan yang penuh kemungkinan, dengan pelayaran sebagai simbol langkah baru yang akan ditempuh oleh para anggota. Kedua lagu dalam album ini juga diperkenalkan dalam versi bahasa Korea dan Jepang, sejalan dengan aktivitas NCT WISH yang menyasar pasar musik di kedua negara tersebut.
+        <p>Perilisan <stronger>WISH</stronger> mendapat sambutan positif dari para penggemar. Antusiasme tersebut terlihat dari keberhasilan lagu "WISH" menempati posisi pertama Oricon Daily Chart Jepang pada 1 Maret 2024. Sementara itu, di Korea Selatan, single album ini juga berhasil menduduki posisi pertama Circle Weekly Album Chart dengan penjualan mencapai 244.157 kopi. Pencapaian tersebut menjadi awal yang menjanjikan bagi NCT WISH sekaligus menunjukkan besarnya dukungan NCTzen terhadap debut unit terbaru NCT.</p>
         <a class="atas" href="#artikel">Kembali ke daftar artikel</a>
       </section>
 
       <section id="artikel3">
         <h2>Mengenal Fandom NCTzen</h2>
         <p class="tanggal">8 November 2026</p>
-        <p>Isi lengkap artikel ketiga. Jelaskan apa itu NCTzen, fandom dari NCT secara keseluruhan, dan bagaimana mereka mendukung NCT WISH.</p>
+        <p>NCTzen merupakan nama resmi fandom NCT yang diumumkan pada 12 Juni 2017. Nama tersebut merupakan gabungan dari kata <strong>NCT</strong> dan <STRONG>Citizen</STRONG>, yang memiliki makna sebagai warga atau bagian dari dunia NCT. Sebutan ini ditujukan kepada seluruh penggemar NCT, termasuk para penggemar dari berbagai unitnya, seperti NCT 127, NCT DREAM, NCT U, dan NCT WISH. Dengan demikian, NCTzen menjadi identitas yang menyatukan para penggemar dari seluruh unit di bawah naungan NCT.
+        <p>Sebagai bagian dari perjalanan karier NCT, NCTzen memiliki peran penting dalam memberikan dukungan kepada setiap unit, termasuk NCT WISH. Dukungan tersebut diwujudkan melalui berbagai kegiatan, mulai dari mendengarkan dan melakukan streaming lagu, membeli album serta merchandise resmi, mengikuti voting dalam ajang penghargaan musik, hingga membagikan informasi mengenai aktivitas grup melalui media sosial. Tidak hanya secara digital, para penggemar juga kerap mengadakan berbagai proyek dukungan, seperti perayaan ulang tahun anggota, kegiatan khusus saat comeback, hingga proyek sosial yang dilakukan atas nama grup.
+        <p>Khusus untuk NCT WISH, para penggemar juga memiliki komunitas fan club resmi bernama <strong>NCTzen WISH</strong> atau yang krap dikenal dengan sebutan WISHZEN, yang diperkenalkan pada Januari 2024 melalui platform Weverse. Kehadiran komunitas ini menjadi wadah bagi para penggemar untuk mengikuti informasi dan aktivitas resmi grup, sekaligus membangun interaksi yang lebih dekat dengan keenam anggota, yaitu Sion, Riku, Yushi, Jaehee, Ryo, dan Sakuya.
+        <P>Keberadaan NCTzen WISH tidak terlepas dari identitas NCTzen sebagai fandom utama yang menaungi seluruh unit NCT. Keduanya menjadi bagian dari dukungan penggemar yang mengiringi perjalanan NCT WISH sejak masa pradebut hingga aktivitas mereka saat ini. Melalui berbagai bentuk dukungan tersebut, NCTzen turut berperan dalam memperkenalkan karya dan perkembangan NCT WISH kepada penggemar yang lebih luas.</p>
         <a class="atas" href="#artikel">Kembali ke daftar artikel</a>
       </section>
 
     </main>
 
-    <!-- ===== SIDEBAR ===== -->
+    
     <aside>
       <div class="widget">
         <h3>Waktu Sekarang</h3>
@@ -263,8 +274,10 @@
 
       <div class="widget">
         <h3>Video</h3>
-        <!-- Ganti VIDEO_ID dengan ID video YouTube (bagian setelah v= di link) -->
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video NCT WISH" allowfullscreen></iframe>
+        <a href="https://youtu.be/xIlFjHHUfI0" target="_blank">
+          <img class="thumb" src="https://img.youtube.com/vi/xIlFjHHUfI0/hqdefault.jpg" alt="Thumbnail MV I Spy NCT WISH">
+        </a>
+        <p>MV terbaru NCT WISH - I Spy. Klik gambar untuk menonton di YouTube.</p>
       </div>
 
       <div class="widget">
@@ -275,22 +288,22 @@
 
   </div>
 
-  <!-- ===== FOOTER ===== -->
+  
   <footer>
-    <p>&copy; 2026 NCT WISH Fanbase. Didesain oleh [isi namamu].</p>
-    <p><a href="https://usernamemu.github.io/nct-wish/">https://usernamemu.github.io/nct-wish/</a></p>
+    <p>&copy; 2026 NCT WISH Fanbase. Didesain oleh @shevayaruby.</p>
+    <p><a href="https://shevayaruby.github.io/nct-wish/">https://shevayaruby.github.io/nct-wish/</a></p>
   </footer>
 
   <script>
-    // Menampilkan jam digital di sidebar
+    
     function tampilkanJam() {
-      var sekarang = new Date();                          // ambil waktu saat ini
-      var jam = document.getElementById("jam");           // cari elemen dengan id "jam"
-      jam.textContent = sekarang.toLocaleTimeString("id-ID"); // tulis waktu ke elemen
+      var sekarang = new Date();                          
+      var jam = document.getElementById("jam");           
+      jam.textContent = sekarang.toLocaleTimeString("id-ID"); 
     }
 
-    tampilkanJam();                  // jalankan sekali saat halaman dibuka
-    setInterval(tampilkanJam, 1000); // ulangi tiap 1000 ms (1 detik)
+    tampilkanJam();                  
+    setInterval(tampilkanJam, 1000); 
   </script>
 
 </body>
